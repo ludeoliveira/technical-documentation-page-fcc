@@ -1,0 +1,1 @@
+This is a test technical documentation page I am building as a part of an exercise to get the Free Code Camp's Responsive web design certification.
