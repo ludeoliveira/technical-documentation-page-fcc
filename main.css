@@ -1,0 +1,24 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+header {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+a{
+    font-weight: 600;
+    color: rgb(253, 67, 160);
+}
+
+a:hover {
+    font-style: italic;
+    background-color: rgb(253, 67, 160);
+    color: white;
+}
+
+code {
+    background-color: rgb(252, 191, 221);
+    padding: .3rem;
+}
