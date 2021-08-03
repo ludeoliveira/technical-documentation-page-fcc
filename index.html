@@ -8,95 +8,150 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="main.css">
-    <title>Git: Principais comandos</title>
+    <title>Folha de Dicas Git: Principais comandos</title>
 </head>
 <body>
     <main id="main-doc">
+        <div class="container">
+            <section class="main-section" id="Instale_o_Git">
+                <header>Instale o Git</header>
+                <ul>
+                    <li>GitHub fornece clientes desktop que incluem uma interface gráfica para as ações mais comuns em um repositório e atualiza automaticamente para a linha de comando do Git para cenários avançados.</li>
+                    <li>GitHub para Windows</li>
+                    <a href="https://desktop.github.com/">windows.github.com</a>
+                    <li>GitHub para Mac</li>
+                    <a href="https://desktop.github.com/">mac.github.com</a>
+                    <li>Distribuições do Git para Linux e sistemas POSIX são disponíveis no site oficial do Git SCM.</li>
+                    <li>Git para todas as plataformas
+                    </li>
+                    <a href="https://git-scm.com/">git-scm.com</a>
+                    </ul>
+            </section>
 
-        <section class="main-section" id="Instale_o_Git">
-            <header>Instale o Git</header>
-            <p>GitHub fornece clientes desktop que incluem uma interface gráfica para as ações mais comuns em um repositório e atualiza automaticamente para a linha de comando do Git para cenários avançados.</p>
-            <p>GitHub para Windows</p>
-            <p><a href="https://desktop.github.com/">windows.github.com</a></p>
-            <p>GitHub para Mac</p>
-            <p><a href="https://desktop.github.com/">mac.github.com</a></p>
-            <p>Distribuições do Git para Linux e sistemas POSIX são disponíveis no site oficial do Git SCM.</p>
-            <p>Git para todas as plataformas
-            </p>
-            <p><a href="https://git-scm.com/">git-scm.com</a></p>
-        </section>
+            <section class="main-section" id="Configure_a_ferramenta">
+                <header>Configure a ferramenta</header>
+                <p>Configure informações de usuário para todos os repositórios locais</p>
+                <code>$ git config --global user.name "[nome]"</code>
+                <p>Configura o nome que você quer ligado às suas transações de commit</p>
+                <code>$ git config --global user.email "[endereco-de-email]"</code>
+                <p>Configura o email que você quer ligado às suas transações de commit</p>
+            </section>
 
-        <section class="main-section" id="Configure_a_ferramenta">
-            <header>Configure a ferramenta</header>
-            <p>Configure informações de usuário para todos os repositórios locais</p>
-            <code>$ git config --global user.name "[nome]"</code>
-            <p>Configura o nome que você quer ligado às suas transações de commit</p>
-            <code>$ git config --global user.email "[endereco-de-email]"</code>
-            <p>Configura o email que você quer ligado às suas transações de commit</p>
-        </section>
+            <section class="main-section" id="Crie_repositórios">
+                <header>Crie repositórios</header>
+                <p>Inicie um novo repositório ou obtenha de uma URL existente</p>
+                <code>$ git init [nome-do-projeto]</code>
+                <p>Cria um novo repositório local com um nome especificado</p>
+                <code>$ git clone [url]</code>
+                <p>Baixa um projeto e seu histórico de versão inteiro</p>
+            </section>
 
-        <section class="main-section" id="Crie_repositórios">
-            <header>Crie repositórios</header>
-            <p>Inicie um novo repositório ou obtenha de uma URL existente</p>
-            <code>$ git init [nome-do-projeto]</code>
-            <p>Cria um novo repositório local com um nome especificado</p>
-            <code>$ git clone [url]</code>
-            <p>Baixa um projeto e seu histórico de versão inteiro</p>
-        </section>
+            <section class="main-section" id="Faça_mudanças">
+                <header>Faça mudanças</header>
+                <p>Revise edições e crie uma transação de commit</p>
+                <code>$ git status</code>
+                <p>Lista todos os arquivos novos ou modificados para serem commitados</p>
+                <code>$ git diff</code>
+                <p>Mostra diferenças no arquivo que ainda não foram preparadas</p>
+                <code>$ git add [arquivo]</code>
+                <p>Faz o snapshot de um arquivo na preparação para versionamento</p>
+                <code>$ git diff --staged</code>
+                <p>Mostra a diferença entre arquivos preparados e suas últimas versões</p>
+                <code>$ git reset [arquivo]</code>
+                <p>Retira o arquivo da área de preparação, mas preserva seu conteúdo</p>
+                <code>$ git commit -m "[mensagem descritiva]"</code>
+                <p>Grava o snapshot permanentemente do arquivo no histórico de versão</p>
+            </section>
 
-        <section class="main-section" id="Faça_mudanças">
-            <header>Faça mudanças</header>
-            <p>Revise edições e crie uma transação de commit</p>
-            <code>$ git status</code>
-            <p>Lista todos os arquivos novos ou modificados para serem commitados</p>
-            <code>$ git diff</code>
-            <p>Mostra diferenças no arquivo que ainda não foram preparadas</p>
-            <code>$ git add [arquivo]</code>
-            <p>Faz o snapshot de um arquivo na preparação para versionamento</p>
-            <code>$ git diff --staged</code>
-            <p>Mostra a diferença entre arquivos preparados e suas últimas versões</p>
-            <code>$ git reset [arquivo]</code>
-            <p>Retira o arquivo da área de preparação, mas preserva seu conteúdo</p>
-            <code>$ git commit -m "[mensagem descritiva]"</code>
-            <p>Grava o snapshot permanentemente do arquivo no histórico de versão</p>
-        </section>
+            <section class="main-section" id="Mudanças_em_grupo">
+                <header>Mudanças em grupo</header>
+                <p>Nomeie uma série de commits e combine os esforços completos</p>
+                <code>$ git branch</code>
+                <p>Lista todos os branches locais no repositório atual</p>
+                <code>$ git branch [nome-do-branch]</code>
+                <p>Cria um novo branch</p>
+                <code>$ git checkout [nome-do-branch]</code>
+                <p>Muda para o branch especificado e atualiza o diretório de trabalho</p>
+                <code>$ git merge [nome-do-branch]</code>
+                <p>Combina o histórico do branch especificado ao branch atual</p>
+                <code>$ git branch -d [nome-do-branch]</code>
+                <p>Exclui o branch especificado</p>
+            </section>
 
-        <section class="main-section" id="Mudanças_em_grupo">
-            <header>Mudanças em grupo</header>
+            <section class="main-section" id="Refatore_nomes_de_arquivos">
+                <header>Refatore nomes de arquivos</header>
+                <p>Mude e remova os arquivos versionados</p>
+                <code>$ git rm [arquivo]</code>
+                <p>Remove o arquivo do diretório de trabalho e o prepara a remoção</p>
+                <code>$ git rm --cached [arquivo]</code>
+                <p>Remove o arquivo do controle de versão mas preserva o arquivo localmente</p>
+                <code>$ git mv [arquivo-original] [arquivo-renomeado]</code>
+                <p>Muda o nome do arquivo e o prepara para o commit</p>
+            </section>
 
-        </section>
+            <section class="main-section" id="Suprima_o_monitoramento">
+                <header>Suprima o monitoramento</header>
+                <p>Ignore arquivos e diretórios temporários</p>
+                <code>*.log <br>
+                    build/ <br>
+                    temp-* </code>
+                <p>Um arquivo de texto chamado .gitignore suprime o versionamento acidental de arquivos e diretórios correspondentes aos padrões especificados
+                </p>
+                <code>$ git ls-files --others --ignored --exclude-standard</code>
+                <p>Lista todos os arquivos ignorados neste projeto</p>
+            </section>
 
-        <section class="main-section" id="Refatore_nomes_de_arquivos">
-            <header>Refatore nomes de arquivos</header>
+            <section class="main-section" id="Salve fragmentos">
+                <header>Salve fragmentos</header>
+                <p>Arquive e restaure mudanças incompletas</p>
+                <code>$ git stash</code>
+                <p>Armazena temporariamente todos os arquivos monitorados modificados</p>
+                <code>$ git stash pop</code>
+                <p>Restaura os arquivos recentes em stash</p>
+                <code>$ git stash list</code>
+                <p>Lista todos os conjuntos de alterações em stash</p>
+                <code>$ git stash drop</code>
+                <p>Descarta os conjuntos de alterações mais recentes em stash</p>
+            </section>
 
-        </section>
+            <section class="main-section" id="Revise_o_histórico">
+                <header>Revise o histórico</header>
+                <p>Navegue e inspecione a evolução dos arquivos do projeto</p>
+                <code>$ git log</code>
+                <p>Lista o histórico de versões para o branch atual</p>
+                <code>$ git log --follow [arquivo]</code>
+                <p>Lista o histórico de versões para um arquivo, incluindo mudanças de nome</p>
+                <code>$ git diff [primerio-branch]...[segundo-branch]</code>
+                <p>Mostra a diferença de conteúdo entre dois branches</p>
+                <code>$ git show [commit]</code>
+                <p>Retorna mudanças de metadata e conteúdo para o commit especificado</p>
+            </section>
 
-        <section class="main-section" id="Suprima_o_monitoramento">
-            <header>Suprima o monitoramento</header>
+            <section class="main-section" id="Desfaça_commits">
+                <header>Desfaça commits</header>
+                <p>Apague enganos e crie um histórico substituto</p>
+                <code>$ git reset [commit]</code>
+                <p>Desfaz todos os commits depois de [commit], preservando mudanças locais</p>
+                <code>$ git reset --hard [commit]</code>
+                <p>Descarta todo histórico e mudanças para o commit especificado</p>
+            </section>
 
-        </section>
+            <section class="main-section" id="Sincronize_mudanças">
+                <header>Sincronize mudanças</header>
+                <p>Registre um repositório remoto e troque o histórico de versão</p>
+                <code>$ git fetch [nome-remoto]</code>
+                <p>Baixe todo o histórico de um repositório remoto</p>
+                <code>$ git merge [nome-remoto]/[branch]</code>
+                <p>Combina o branch remoto ao branch local atual</p>
+                <code>$ git push [alias] [branch]</code>
+                <p>Envia todos os commits do branch local para o GitHub</p>
+                <code>$ git pull</code>
+                <p>Baixa o histórico e incorpora as mudanças</p>
+            </section>
+        </div>
 
-        <section class="main-section" id="Salve fragmentos">
-            <header>Salve fragmentos</header>
-
-        </section>
-
-        <section class="main-section" id="Revise_o_histórico">
-            <header>Revise o histórico</header>
-
-        </section>
-
-        <section class="main-section" id="Desfaça_commits">
-            <header>Desfaça commits</header>
-
-        </section>
-
-        <section class="main-section" id="Sincronize_mudanças">
-            <header>Sincronize mudanças</header>
-
-        </section>
-
-
+        <legend>fonte: <a href="https://training.github.com/downloads/pt_BR/github-git-cheat-sheet/">folha de dicas de Git do Github</a></legend>
+        
     </main>
     
 </body>

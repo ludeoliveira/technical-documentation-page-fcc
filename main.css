@@ -1,10 +1,24 @@
+* {
+    margin: 0;
+	padding: 0;
+	border: 0;
+	font: inherit;
+	vertical-align: baseline;
+    text-decoration: none;
+    box-sizing: border-box;;
+}
 body {
     font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
 }
 
 header {
     font-size: 2rem;
     font-weight: 600;
+}
+
+ul {
+    list-style-type: none;
 }
 
 a{
@@ -21,4 +35,14 @@ a:hover {
 code {
     background-color: rgb(252, 191, 221);
     padding: .3rem;
+}
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    word-wrap: break-word;
+}
+
+.main-section {
+    max-width: 50ch;
+    padding: 2rem;
 }
