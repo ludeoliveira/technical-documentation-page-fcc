@@ -11,25 +11,44 @@
     <title>Folha de Dicas Git: Principais comandos</title>
 </head>
 <body>
-    <main id="main-doc">
-        <div class="container">
+        <nav class="navbar"  id="navbar">
+            
+            <header>Principais comandos Git</header>
+            
+            <ul>
+                <li><a class="nav-link" href="#Instale_o_Git">Instale o Git</a></li>
+                <li><a class="nav-link" href="#Configure_a_ferramenta">Configure a ferramenta</a></li>
+                <li><a class="nav-link" href="#Crie_repositórios">Crie repositórios</a></li>
+                <li><a class="nav-link" href="#Faça_mudanças">Faça mudanças</a></li>
+                <li><a class="nav-link" href="#Mudanças_em_grupo">Mudanças em grupo</a></li>
+                <li><a class="nav-link" href="#Refatore_nomes_de_arquivos">Refatore nomes de arquivos</a></li>
+                <li><a class="nav-link" href="#Suprima_o_monitoramento">Suprima o monitoramento</a></li>
+                <li><a class="nav-link" href="#Salve_fragmentos">Salve fragmentos</a></li>
+                <li><a class="nav-link" href="#Revise_o_histórico">Revise o histórico</a></li>
+                <li><a class="nav-link" href="#Desfaça_commits">Desfaça commits</a></li>
+                <li><a class="nav-link" href="#Sincronize_mudanças">Sincronize mudanças</a></li>
+            </ul>
+
+        </nav>
+
+        <main id="main-doc">
+
             <section class="main-section" id="Instale_o_Git">
                 <header>Instale o Git</header>
                 <ul>
                     <li>GitHub fornece clientes desktop que incluem uma interface gráfica para as ações mais comuns em um repositório e atualiza automaticamente para a linha de comando do Git para cenários avançados.</li>
-                    <li>GitHub para Windows</li>
-                    <a href="https://desktop.github.com/">windows.github.com</a>
-                    <li>GitHub para Mac</li>
-                    <a href="https://desktop.github.com/">mac.github.com</a>
+                    <li>GitHub para Windows: <a href="https://desktop.github.com/">windows.github.com</a></li>
+                    
+                    <li>GitHub para Mac: <a href="https://desktop.github.com/">mac.github.com</a></li>
                     <li>Distribuições do Git para Linux e sistemas POSIX são disponíveis no site oficial do Git SCM.</li>
-                    <li>Git para todas as plataformas
+                    <li>Git para todas as plataformas: <a href="https://git-scm.com/">git-scm.com</a>
                     </li>
-                    <a href="https://git-scm.com/">git-scm.com</a>
+                    
                     </ul>
             </section>
 
             <section class="main-section" id="Configure_a_ferramenta">
-                <header>Configure a ferramenta</header>
+                <header class="header-section">Configure a ferramenta</header>
                 <p>Configure informações de usuário para todos os repositórios locais</p>
                 <code>$ git config --global user.name "[nome]"</code>
                 <p>Configura o nome que você quer ligado às suas transações de commit</p>
@@ -89,10 +108,11 @@
                 <p>Muda o nome do arquivo e o prepara para o commit</p>
             </section>
 
+        
             <section class="main-section" id="Suprima_o_monitoramento">
                 <header>Suprima o monitoramento</header>
                 <p>Ignore arquivos e diretórios temporários</p>
-                <code>*.log <br>
+                <code class="code-special">*.log <br>
                     build/ <br>
                     temp-* </code>
                 <p>Um arquivo de texto chamado .gitignore suprime o versionamento acidental de arquivos e diretórios correspondentes aos padrões especificados
@@ -101,7 +121,7 @@
                 <p>Lista todos os arquivos ignorados neste projeto</p>
             </section>
 
-            <section class="main-section" id="Salve fragmentos">
+            <section class="main-section" id="Salve_fragmentos">
                 <header>Salve fragmentos</header>
                 <p>Arquive e restaure mudanças incompletas</p>
                 <code>$ git stash</code>
@@ -148,11 +168,10 @@
                 <code>$ git pull</code>
                 <p>Baixa o histórico e incorpora as mudanças</p>
             </section>
-        </div>
 
-        <legend>fonte: <a href="https://training.github.com/downloads/pt_BR/github-git-cheat-sheet/">folha de dicas de Git do Github</a></legend>
-        
-    </main>
+            <legend>fonte: <a href="https://training.github.com/downloads/pt_BR/github-git-cheat-sheet/">folha de dicas de Git do Github</a></legend>
+            
+        </main>
     
-</body>
+    </body>
 </html>

@@ -1,9 +1,9 @@
+/* GLOBAL STYLES */
+
 * {
     margin: 0;
 	padding: 0;
 	border: 0;
-	font: inherit;
-	vertical-align: baseline;
     text-decoration: none;
     box-sizing: border-box;;
 }
@@ -13,7 +13,7 @@ body {
 }
 
 header {
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: 600;
 }
 
@@ -28,21 +28,103 @@ a{
 
 a:hover {
     font-style: italic;
-    background-color: rgb(253, 67, 160);
-    color: white;
+    /* background-color: rgb(253, 67, 160); */
+    color: black;
 }
 
 code {
-    background-color: rgb(252, 191, 221);
+    background: rgb(250, 216, 233);
     padding: .3rem;
 }
-.container {
-    display: flex;
-    flex-wrap: wrap;
-    word-wrap: break-word;
+
+.code-special {
+    width: 50%;
+    
+    display: block;
+
 }
 
-.main-section {
-    max-width: 50ch;
+/* NAVIGATION STYLES */
+
+.navbar {
+    position: fixed;
+    min-width: 290px;
+    top:0;
+    left: 0;
+    width: 300px;
+    height: 100%;
+    background-color: rgb(252, 238, 245);
     padding: 2rem;
+}
+
+.navbar ul {
+    height: 90%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    margin-top: 1rem;;
+  }
+
+.navbar li {
+    cursor: pointer;
+    padding: .7rem;
+    background: rgb(250, 216, 233);
+    margin-bottom: .3rem;
+    position: relative;
+    width: 100%;
+}
+
+/* MAIN STYLES */
+
+#main-doc {
+    padding:0 0 1rem;
+    margin-left: 35ch;
+    position: absolute;
+}
+
+.main-section > * {
+    margin: 2rem 0;
+    max-width: 60ch;
+}
+
+.main-section li {
+    padding: 1rem 0 ;
+}
+
+p:nth-of-type(1),
+.main-section li:nth-of-type(1) {
+    font-weight: 700;
+    margin-top: -1rem;
+    font-style: italic;
+}
+
+legend {
+    margin: 0 0 2rem;
+    font-size: .7rem;
+}
+
+
+/* MEDIA QUERY MOBILE */
+
+@media (max-width: 800px) {
+  
+   .navbar ul {
+    height: 198px;
+  }
+
+   #navbar {
+    position: absolute;
+    top: 0;
+    margin: 0;
+    width: 100%;
+    max-height: 275px;
+    border: none;
+    z-index: 1;
+}
+
+    #main-doc {  
+    margin: 275px 2rem 2rem;
+    padding-top: 1rem;
+    position:relative;
+}
+
 }
