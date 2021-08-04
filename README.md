@@ -1,1 +1,1 @@
-This is a test technical documentation page I am building as a part of an exercise to get the Free Code Camp's Responsive web design certification.
+This is a technical documentation page I've constructed as a part of an exercise to get the Free Code Camp's Responsive web design certification. Based on this github page: https://training.github.com/downloads/pt_BR/github-git-cheat-sheet/
